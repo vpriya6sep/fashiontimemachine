@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose your location</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="ftm-logo.png">
+</head>
+<body class="location-bg">
+    <div class="location-modal">
+        <h1>Choose your location</h1>
+        <label class="location-label" for="country-dropdown">Select Country</label>
+        <div class="country-dropdown-container">
+            <div class="country-dropdown" id="country-dropdown" tabindex="0">
+                <span id="country-selected">Select Country</span>
+                <span class="country-dropdown-arrow">&#9660;</span>
+            </div>
+            <div class="country-dropdown-list" id="country-dropdown-list">
+                <div class="country-dropdown-option">India</div>
+                <div class="country-dropdown-option">United States</div>
+                <div class="country-dropdown-option">United Kingdom</div>
+            </div>
+        </div>
+        <button class="location-save-btn">SAVE LOCATION</button>
+    </div>
+    <div class="country-dropdown-overlay" id="country-dropdown-overlay"></div>
+    <script>
+        // Dropdown logic with blur overlay
+        const countryDropdown = document.getElementById('country-dropdown');
+        const countryList = document.getElementById('country-dropdown-list');
+        const countrySelected = document.getElementById('country-selected');
+        const countryOverlay = document.getElementById('country-dropdown-overlay');
+        document.querySelectorAll('.country-dropdown-option').forEach(opt => {
+            opt.onclick = function(e) {
+                countrySelected.textContent = this.textContent;
+                countryList.classList.remove('show');
+                countryOverlay.classList.remove('show');
+                e.stopPropagation();
+            }
+        });
+        countryDropdown.onclick = function(e) {
+            countryList.classList.toggle('show');
+            countryOverlay.classList.toggle('show');
+            e.stopPropagation();
+        };
+        countryOverlay.onclick = function() {
+            countryList.classList.remove('show');
+            countryOverlay.classList.remove('show');
+        };
+        document.body.addEventListener('keydown', function(e){
+            if(e.key === "Escape") {
+                countryList.classList.remove('show');
+                countryOverlay.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
