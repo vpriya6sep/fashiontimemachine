@@ -784,6 +784,48 @@ body, h1, h2, h3, h4, h5, h6, ul, li, p, span, div, header, footer, main, sectio
     min-width: 0;
 }
 
+/* Product Page Styling */
+.ftm-product-main {
+    padding: 48px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--ftm-white);
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.ftm-product-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.product-details h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--ftm-black);
+}
+
+.product-details p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.product-details p strong {
+    font-weight: bold;
+    color: var(--ftm-pink);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .ftm-header-top {
