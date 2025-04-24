@@ -1,0 +1,96 @@
+/* --- Enhanced Product Page Layout --- */
+.ftm-product-main {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--ftm-white);
+}
+.product-details {
+    flex: 1 1 420px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+}
+.ftm-product-gallery {
+    flex: 1 1 340px;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* New content sections */
+.ftm-product-extra {
+    margin-top: 32px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 24px 28px;
+    width: 100%;
+    max-width: 520px;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 1.05rem;
+}
+.ftm-product-extra h3 {
+    color: var(--ftm-pink);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.ftm-product-extra ul {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+.ftm-product-share {
+    margin-top: 18px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.ftm-product-share span {
+    font-weight: bold;
+    color: #888;
+}
+.ftm-product-share a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eee;
+    color: var(--ftm-pink);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: background 0.15s;
+}
+.ftm-product-share a:hover {
+    background: var(--ftm-pink);
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .ftm-product-main {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .product-details, .ftm-product-gallery {
+        max-width: 98vw;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .ftm-product-extra {
+        max-width: 98vw;
+        padding: 16px 8px;
+    }
+}

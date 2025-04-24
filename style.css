@@ -786,171 +786,133 @@ body, h1, h2, h3, h4, h5, h6, ul, li, p, span, div, header, footer, main, sectio
 
 /* Product Page Styling */
 .ftm-product-main {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
     padding: 48px 16px;
     max-width: 1200px;
     margin: 0 auto;
-    background: var(--ftm-white);
+    background: var(--ftm-white, #fff);
 }
 
-.product-details {
+.ftm-product-gallery {
+    flex: 1 1 0;
+    max-width: 440px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 24px;
+    gap: 18px;
 }
 
-.ftm-product-img {
+.ftm-product-img.main-img {
     width: 100%;
     max-width: 400px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     object-fit: cover;
+    margin-bottom: 12px;
 }
 
-.product-details h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--ftm-black);
+.ftm-product-thumbnails {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
 }
 
-.product-details p {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.6;
+.ftm-product-thumbnails .thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.18s;
+    background: #f5f5f5;
 }
 
-.product-details p strong {
-    font-weight: bold;
-    color: var(--ftm-pink);
+.ftm-product-thumbnails .thumb.active,
+.ftm-product-thumbnails .thumb:hover {
+    border: 2px solid var(--ftm-pink, #b84e8c);
 }
 
-/* Responsive */
+.product-details {
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+    justify-content: flex-start;
+}
+
 @media (max-width: 900px) {
-    .ftm-header-top {
+    .ftm-product-main {
         flex-direction: column;
-        height: auto;
-        gap: 10px;
-        padding: 12px;
+        gap: 32px;
+        padding: 32px 4vw;
     }
-    .ftm-footer-content {
-        padding: 24px 0 0 0;
-        max-width: 98vw;
-    }
-    .ftm-footer-columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
-    .ftm-footer-col {
+    .ftm-product-gallery {
         max-width: 100%;
-        width: 100%;
-        margin-bottom: 24px;
     }
-    .ftm-women-products {
-        flex-wrap: nowrap !important;
-        gap: 16px;
+    .product-details {
+        align-items: center;
+        text-align: center;
     }
-    .ftm-women-products-scroll {
-        overflow-x: auto;
-    }
-    .ftm-women-product-card {
-        width: 44vw;
-        min-width: 140px;
-        max-width: 98vw;
-        flex: 0 0 auto;
-    }
-    .ftm-women-hero-carousel { height: 100%; }
-    .ftm-men-products {
-        flex-wrap: nowrap !important;
-        gap: 16px;
-    }
-    .ftm-men-products-scroll {
-        overflow-x: auto;
-    }
-    .ftm-men-product-card {
-        width: 44vw;
-        min-width: 140px;
-        max-width: 98vw;
-        flex: 0 0 auto;
-    }
-    .ftm-men-hero-carousel { height: 100%; }
 }
+
 @media (max-width: 600px) {
-    .ftm-header-top {
+    .ftm-product-main {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 8px;
-        height: auto;
+        gap: 18px;
+        padding: 18px 2vw;
     }
-    .ftm-nav-btn {
-        padding: 10px 24px;
-        font-size: 15px;
+    .ftm-product-gallery {
+        max-width: 100%;
     }
-    .ftm-footer-content {
-        padding: 12px 0 0 0;
+    .ftm-product-thumbnails .thumb {
+        width: 44px;
+        height: 44px;
     }
-    .ftm-footer-gradient {
-        height: 36px;
-    }
-    .ftm-hero {
-        height: 220px;
-    }
-    .location-modal {
-        padding: 24px 8px 32px 8px;
-        max-width: 98vw;
-    }
-    .country-dropdown, .country-dropdown-list {
-        min-width: 0;
-        width: 100%;
-        font-size: 1.2rem;
-        padding: 16px 12px 16px 12px;
-    }
-    .country-dropdown-list .country-dropdown-option {
-        font-size: 1.2rem;
-        padding: 16px 12px;
-    }
-    .location-save-btn {
-        font-size: 1.1rem;
-        padding: 14px 18px;
-    }
-    .ftm-modal-content, .ftm-form {
-        width: 98vw;
-        max-width: 98vw;
-        padding: 18px 4vw 24px 4vw;
-    }
-    .ftm-modal-tabs {
-        width: 100%;
-    }
-    .ftm-women-products {
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        align-items: stretch;
-    }
-    .ftm-women-products-scroll {
-        overflow-x: auto;
-    }
-    .ftm-women-product-card {
-        width: 80vw;
-        min-width: 180px;
-        max-width: 90vw;
-        flex: 0 0 auto;
-    }
-    .ftm-women-hero-carousel { height: 100%; }
-    .ftm-men-products {
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        align-items: stretch;
-    }
-    .ftm-men-products-scroll {
-        overflow-x: auto;
-    }
-    .ftm-men-product-card {
-        width: 80vw;
-        min-width: 180px;
-        max-width: 90vw;
-        flex: 0 0 auto;
-    }
-    .ftm-men-hero-carousel { height: 100%; }
+}
+
+/* Add to Cart and Buy Now Button Styling */
+.ftm-btn-cart {
+    background: var(--ftm-pink, #b84e8c);
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 16px 44px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-right: 18px;
+    box-shadow: 0 4px 16px rgba(184,78,140,0.10);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+}
+.ftm-btn-cart:hover {
+    background: #a13e7a;
+    box-shadow: 0 6px 18px rgba(184,78,140,0.18);
+}
+
+.ftm-btn-buy {
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 16px 44px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(34,34,34,0.10);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+}
+.ftm-btn-buy:hover {
+    background: #b84e8c;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(184,78,140,0.18);
 }

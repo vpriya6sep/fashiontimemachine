@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Disco Fever Dress 4 | Fashion Time Machine</title>
+    <title>Disco Fever Dress 3 | Fashion Time Machine</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../product-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../ftm-logo.png">
 </head>
@@ -21,6 +22,51 @@
                 <button class="ftm-nav-btn">WOMEN</button>
                 <button class="ftm-nav-btn active">MEN</button>
             </nav>
+            <div class="ftm-header-right">
+                <span class="ftm-country">
+                    <span class="ftm-country-locationicon">
+                        <svg viewBox="0 0 20 20">
+                            <circle cx="10" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 2a6 6 0 0 1 6 6c0 4.5-6 10-6 10s-6-5.5-6-10a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </span>
+                    <span class="ftm-country-dropdown" id="ftm-country-dropdown">
+                        <span id="ftm-country-selected">India</span>
+                        <span class="ftm-country-dropdown-arrow">&#9660;</span>
+                    </span>
+                    <div class="ftm-country-overlay" id="ftm-country-overlay"></div>
+                    <div class="ftm-country-list" id="ftm-country-list">
+                        <div class="ftm-country-option">
+                            <span class="ftm-country-locationicon">
+                                <svg viewBox="0 0 20 20">
+                                    <circle cx="10" cy="8" r="4" stroke="#b84e8c" stroke-width="2"/>
+                                    <path d="M10 2a6 6 0 0 1 6 6c0 4.5-6 10-6 10s-6-5.5-6-10a6 6 0 0 1 6-6z" stroke="#b84e8c" stroke-width="2" fill="none"/>
+                                </svg>
+                            </span>
+                            India
+                        </div>
+                        <div class="ftm-country-option">
+                            <span class="ftm-country-locationicon">
+                                <svg viewBox="0 0 20 20">
+                                    <circle cx="10" cy="8" r="4" stroke="#b84e8c" stroke-width="2"/>
+                                    <path d="M10 2a6 6 0 0 1 6 6c0 4.5-6 10-6 10s-6-5.5-6-10a6 6 0 0 1 6-6z" stroke="#b84e8c" stroke-width="2" fill="none"/>
+                                </svg>
+                            </span>
+                            United States
+                        </div>
+                        <div class="ftm-country-option">
+                            <span class="ftm-country-locationicon">
+                                <svg viewBox="0 0 20 20">
+                                    <circle cx="10" cy="8" r="4" stroke="#b84e8c" stroke-width="2"/>
+                                    <path d="M10 2a6 6 0 0 1 6 6c0 4.5-6 10-6 10s-6-5.5-6-10a6 6 0 0 1 6-6z" stroke="#b84e8c" stroke-width="2" fill="none"/>
+                                </svg>
+                            </span>
+                            United Kingdom
+                        </div>
+                    </div>
+                </span>
+                <span class="ftm-contact">CONTACT US</span>
+            </div>
         </div>
         <!-- White Bar with Icons and Decade Dropdown -->
         <div class="ftm-whitebar">
@@ -72,19 +118,65 @@
             </div>
         </div>
     </header>
-
     <!-- Main Content -->
     <main class="ftm-product-main">
+        <div class="ftm-product-gallery">
+            <img src="../img/mdress4.svg" alt="Classic Tuxedo" class="ftm-product-img main-img">
+            <div class="ftm-product-thumbnails">
+                <img src="../img/mdress3.svg" alt="Classic Tuxedo" class="thumb active">
+                <img src="../img/mdress1.svg" alt="Classic Tuxedo Alt" class="thumb">
+                <img src="../img/mdress2.svg" alt="Classic Tuxedo Alt 2" class="thumb">
+            </div>
+        </div>
         <section class="product-details">
-            <h1>Disco Fever Dress 4</h1>
-            <img src="../img/mdress4.svg" alt="Disco Fever Dress 4" class="ftm-product-img">
-            <p><strong>Decade:</strong> 1990s</p>
-            <p><strong>Type:</strong> Dress</p>
-            <p><strong>Price:</strong> Rs. 2199</p>
-            <p>Step into the 1990s with this Disco Fever Dress. Its vibrant colors and retro style will make you the center of attention.</p>
+            <h1>Classic Tuxedo</h1>
+            <div class="ftm-product-actions">
+                <button class="ftm-btn ftm-btn-cart">Add to Cart</button>
+                <button class="ftm-btn ftm-btn-buy">Buy Now</button>
+            </div>
+            <div class="ftm-product-reviews">
+                <span class="ftm-stars">★★★★★</span>
+                <span class="ftm-review-count">4.7 (28 reviews)</span>
+                <div class="ftm-review-sample">“Sharp, stylish, and comfortable. Got so many compliments!”</div>
+            </div>
+            <p><strong>Decade:</strong> 1980s</p>
+            <p><strong>Type:</strong> Suit</p>
+            <p><strong>Price:</strong> Rs. 2499</p>
+            <div class="ftm-product-highlights">
+                <h3>Product Highlights</h3>
+                <ul>
+                    <li>Classic 80s silhouette</li>
+                    <li>Premium, breathable fabric</li>
+                    <li>Perfect for themed parties</li>
+                    <li>Easy to maintain</li>
+                </ul>
+            </div>
+            <div class="ftm-product-extra">
+                <h3>Size & Fit</h3>
+                <ul>
+                    <li>Model is 6'0" and wears size M</li>
+                    <li>True to size, regular fit</li>
+                </ul>
+                <h3>Care Instructions</h3>
+                <ul>
+                    <li>Dry clean recommended</li>
+                    <li>Do not bleach</li>
+                    <li>Iron on low if needed</li>
+                </ul>
+                <h3>Shipping & Returns</h3>
+                <ul>
+                    <li>Free shipping on orders over Rs. 999</li>
+                    <li>30-day easy returns</li>
+                </ul>
+            </div>
+            <div class="ftm-product-share">
+                <span>Share:</span>
+                <a href="#" title="Share on Instagram" style="background:#e1306c;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/></svg></a>
+                <a href="#" title="Share on Facebook" style="background:#3b5998;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M15 8h2V6h-2a2 2 0 0 0-2 2v2h-2v2h2v4h2v-4h2l1-2h-3V8z" fill="currentColor"/></svg></a>
+                <a href="#" title="Share on X" style="background:#222;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M7 17l10-10M7 7l10 10" stroke="currentColor" stroke-width="2"/></svg></a>
+            </div>
         </section>
     </main>
-
     <!-- Footer -->
     <footer class="ftm-footer">
         <div class="ftm-footer-gradient"></div>
@@ -160,5 +252,21 @@
             </div>
         </div>
     </footer>
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script>
+        // Navigation for header buttons and icons
+        document.querySelectorAll('.ftm-nav-btn')[0]?.addEventListener('click', function() {
+            window.location.href = '../women.html';
+        });
+        document.querySelectorAll('.ftm-nav-btn')[1]?.addEventListener('click', function() {
+            window.location.href = '../men.html';
+        });
+        document.querySelectorAll('.ftm-login-link').forEach(function(el) {
+            el.addEventListener('click', function() {
+                window.location.href = '../login.html';
+            });
+        });
+    </script>
 </body>
 </html>
